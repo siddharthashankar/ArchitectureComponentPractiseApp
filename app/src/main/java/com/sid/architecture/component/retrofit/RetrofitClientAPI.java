@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClientAPI {
     private static Retrofit retrofit = null;
 
-    static Retrofit getRetrofitInstance(String url){
+   public static Retrofit getRetrofitInstance(String url){
         if(retrofit == null){
         retrofit = new Retrofit.Builder()
                 .baseUrl(url)
@@ -18,7 +18,7 @@ public class RetrofitClientAPI {
         return retrofit;
     }
 
-    static Retrofit getMovieDetails(){
+  public static Retrofit getMovieDetails(){
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://simplifiedcoding.net/demos/")
                 .addConverterFactory(GsonConverterFactory.create())

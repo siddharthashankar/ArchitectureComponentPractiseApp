@@ -1,4 +1,4 @@
-package com.sid.architecture.component.retrofit;
+package com.sid.architecture.component.retrofit.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -12,6 +12,10 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.sid.architecture.component.R;
+import com.sid.architecture.component.retrofit.APIInterface;
+import com.sid.architecture.component.retrofit.RetrofitClientAPI;
+import com.sid.architecture.component.retrofit.adapter.MovieAdapter;
+import com.sid.architecture.component.retrofit.adapter.MultipleResourceAdapter;
 import com.sid.architecture.component.retrofit.model.MovieDetails;
 import com.sid.architecture.component.retrofit.model.MultipleResource;
 import com.sid.architecture.component.utils.Constants;
@@ -21,7 +25,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class RetrofitActivityDemo extends AppCompatActivity {
 

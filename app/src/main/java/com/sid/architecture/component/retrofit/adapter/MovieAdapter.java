@@ -1,18 +1,20 @@
-package com.sid.architecture.component.retrofit;
+package com.sid.architecture.component.retrofit.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.sid.architecture.component.R;
-import com.sid.architecture.component.retrofit.model.MultipleResource;
+import com.sid.architecture.component.retrofit.model.MovieDetails;
 
 import java.util.List;
 
-public class MultipleResourceAdapter extends RecyclerView.Adapter<MultipleResourceAdapter.MyViewHolder> {
+public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder> {
 
-    private List<MultipleResource.DataRecords> dataRecords;
+    private List<MovieDetails> dataRecords;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView id, name, year;
@@ -24,9 +26,7 @@ public class MultipleResourceAdapter extends RecyclerView.Adapter<MultipleResour
             year = (TextView) view.findViewById(R.id.year);
         }
     }
-
-
-    public MultipleResourceAdapter(List<MultipleResource.DataRecords> moviesList) {
+    public MovieAdapter(List<MovieDetails> moviesList) {
         this.dataRecords = moviesList;
     }
 
@@ -39,10 +39,10 @@ public class MultipleResourceAdapter extends RecyclerView.Adapter<MultipleResour
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        MultipleResource.DataRecords movie = dataRecords.get(position);
+        MovieDetails movie = dataRecords.get(position);
         holder.id.setText(movie.name);
-        holder.name.setText(movie.color);
-        holder.year.setText(movie.year.toString());
+        holder.name.setText(movie.realname);
+        holder.year.setText(movie.team);
     }
 
     @Override
