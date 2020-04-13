@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import com.sid.architecture.component.livedata.model.Hero;
-import com.sid.architecture.component.livedata.service.HeroListRepository;
+import com.sid.architecture.component.livedata.repositories.HeroListRepository;
 import java.util.List;
 
 public class HeroesViewModel extends AndroidViewModel {

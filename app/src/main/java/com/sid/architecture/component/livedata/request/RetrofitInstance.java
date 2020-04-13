@@ -1,4 +1,4 @@
-package com.sid.architecture.component.livedata.service;
+package com.sid.architecture.component.livedata.request;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
